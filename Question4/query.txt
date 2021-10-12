@@ -1,0 +1,5 @@
+SELECT p.GivenName AS PersonName,  FatherName.FamilyName AS FatherName, MotherName.FamilyName AS MotherName
+FROM Person p, PersonParent x, 
+(select p.FamilyName from Person p, PersonParent x where p.personID = x.parentID AND p.Gender = 'M' AND x.personID=p.personID) AS FatherName,
+(select p.FamilyName from Person p, PersonParent x where p.personID = x.parentID AND p.Gender = 'F' AND x.personID=p.personID) AS MotherName
+WHERE p.personID = x.parentID;

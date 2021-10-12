@@ -1,0 +1,12 @@
+answer in Java, using recursion:
+time complexity: O(n)
+
+answer in JS, using for loop:
+time complexity: O(n)
+
+answer in C, using while loop:
+time complexity: O(n)
+
+---
+
+* Time complexity of the all programs are same. Only difference is language and implementation type.
